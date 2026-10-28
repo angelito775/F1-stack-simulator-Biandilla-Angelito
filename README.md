@@ -1,6 +1,16 @@
 # Flask Stack Simulator startup template
 
 This is the unfinished repository for a pre-demo reading activity. Read `Flask_PreDemo_Reading_Activity.pdf` first. 
+# Student Information
+Name: Angelito Biandilla
+Section: BSIT WMT 4-2
+
+# Original Starter Repository
+https://github.com/Jackson-Soriano/f1-elec4-stack-simulator-starter
+
+# Activity Description
+
+This activity involves exploring the Flask Stack Simulator starter files, understanding the Flask application and stack model, previewing the static HTML pages, reading the existing comments and TODOs, and answering the pre-demo reading worksheet. The TODOs must remain unfinished until the instructor's demonstration.
 
 ## Before the demonstration
 
