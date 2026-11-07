@@ -1,37 +1,40 @@
-# Flask Stack Simulator startup template
+# Flask Stack and Queue Simulators
 
-This is the unfinished repository for a pre-demo reading activity. Read `Flask_PreDemo_Reading_Activity.pdf` first. 
-# Student Information
-Name: Angelito Biandilla
-Section: BSIT WMT 4-2
+This repository contains two independent Flask applications that demonstrate
+LIFO stack and FIFO queue operations.
 
-# Original Starter Repository
-https://github.com/Jackson-Soriano/f1-elec4-stack-simulator-starter
+## Requirements
 
-# Activity Description
+- Python 3.9 or newer
+- Flask (`pip install -r requirements.txt`)
 
-This activity involves exploring the Flask Stack Simulator starter files, understanding the Flask application and stack model, previewing the static HTML pages, reading the existing comments and TODOs, and answering the pre-demo reading worksheet. The TODOs must remain unfinished until the instructor's demonstration.
+## Stack simulator
 
-## Before the demonstration
+From the repository root, run:
 
-1. Clone the repository URL supplied by your instructor.
-2. Open the cloned folder in VS Code.
-3. Open `templates/index.html` directly in a browser. This is a static preview.
-4. Click through the navigation to the contact placeholder.
-5. Read the HTML comments, app.py TODOs, and stack_model.py TODOs.
-6. Answer the reading worksheet. Do not complete the TODOs before the demonstration.
+```powershell
+python app.py
+```
 
-## Files
+Open `http://127.0.0.1:5000`. Use **Push**, **Pop**, **Peek**, and **Clear**
+to operate on the stack. The top item is shown first; popped values appear in
+the removed-items area.
 
-- app.py: Flask setup and route TODOs P1-P9.
-- stack_model.py: Stack method.
-- templates/index.html: standalone static simulator preview.
-- templates/contact.html: standalone placeholder page.
-- templates/base.html: standalone layout reference; inheritance is not active yet.
-- static/css/style.css: supplied appearance adapted for this preview.
-- static/js/ui.js: optional focus enhancement and a later effect TODO.
-- requirements.txt: Flask dependency only.
+## Queue simulator
 
-During the demo, the instructor will convert static paths into url_for calls, connect form submission, introduce Jinja variables and loops, and connect Python stack operations. The three HTML files are intentionally independent before that conversion.
+From the repository root, run:
 
+```powershell
+python queue-simulator\app.py
+```
 
+Open `http://127.0.0.1:5000`. Use **Enqueue**, **Dequeue**, **Peek**, and
+**Clear** to operate on the queue. Values are displayed from **Front** to
+**Rear**; dequeued values appear in the removed-items area.
+
+Both apps keep data in the browser's signed Flask session. Set the
+`FLASK_SECRET_KEY` environment variable to use a persistent secret key across
+restarts; otherwise, a random development key is generated when the app starts.
+Each app accepts nonblank values up to 24 characters and limits the structure
+to 20 values. The removed-items history keeps the 20 most recent removals and
+is reset by Clear.

@@ -1,10 +1,12 @@
-"""Stack Object"""
+"""Last-in, first-out stack data structure."""
+
+
 class Stack:
     def __init__(self, items=None):
-        self.items = list(items or [])  # Copy previous values into this object.
+        self.items = list(items or [])
 
     def push(self, value):
-        self.items.append(value)  # The last element represents the top.
+        self.items.append(value)
 
     def pop(self):
         return self.items.pop() if self.items else None
@@ -20,4 +22,3 @@ class Stack:
 
     def clear(self):
         self.items.clear()
-
